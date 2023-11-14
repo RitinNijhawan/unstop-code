@@ -1,0 +1,256 @@
+<div class="main-conatiner">
+
+    <!--Desktop Header-->
+    <header class="d-none d-md-flex justify-content-between align-items-center">
+
+        <div class="d-flex align-items-center">
+            <h4>Assessment</h4>
+            <div class="ass-sub-heading d-flex align-items-center justify-content-center flex-column">
+                <h5>My Assessment</h5>
+            </div>
+        </div>
+
+        <div class="pe-3" >
+            <img src="assets/images/mobile.svg" alt="Assesment" [height]="30" />
+        </div>
+
+    </header>
+
+    <!--Mobile Tab-->
+    <header class="d-block d-md-none header-mobile">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">My Assessments</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Unstop Assessments</a>
+            </li>
+        </ul>
+    </header>
+
+
+
+
+
+
+
+
+
+    <div class="p-3 content-main">
+        <h5 class="d-none d-md-block">Assessments Overview</h5>
+
+        <div class="d-flex d-md-none justify-content-between align-items-center my-2">
+            <h5> My Assessment</h5>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <img src="assets/images/search.svg" alt="search" />
+                <img src="assets/images/filter.svg" alt="filter" class="mx-3" />
+                <img src="assets/images/bar.svg" alt="bar" />
+            </div>
+
+        </div>
+
+
+        <div class="row d-none d-md-flex ">
+
+            <div class="col-12 d-flex flex-row">
+
+                <div class="overview-container d-flex mt-0 mt-md-3">
+                    <div class="overview-wrapper">
+                        <span class="overview-heading">Total Assessment</span>
+
+                        <div class="overview-content d-flex align-items-center">
+                            <div class="overview-image d-flex align-items-center justify-content-center">
+                                <img src="assets/images/total-ass.svg" />
+                            </div>
+                            <div class="count"><span class="count-number">34</span></div>
+                        </div>
+
+                    </div>
+
+                    <div class="overview-wrapper">
+                        <span class="overview-heading">Candidates</span>
+
+                        <div class="d-flex">
+
+                            <div class="overview-content d-flex align-items-center content-border">
+                                <div class="overview-image d-flex align-items-center justify-content-center">
+                                    <img src="assets/images/candid.svg" />
+                                </div>
+                                <div class="count d-flex flex-column">
+
+                                    <span class="count-number">11,145 <span class="count-special">+89</span></span>
+
+                                    <span class="count-text">Total Candidate</span>
+                                </div>
+                            </div>
+                            <div class="overview-content d-flex align-items-center">
+
+                                <div class="count d-flex flex-column">
+
+                                    <span class="count-number">1,14<span class="count-special">+89</span></span>
+
+                                    <span class="count-text">Who Attamped</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="overview-wrapper">
+                        <span class="overview-heading">Candidates Source</span>
+
+                        <div class="d-flex">
+
+                            <div class="overview-content d-flex align-items-center content-border">
+                                <div class="overview-image-red d-flex align-items-center justify-content-center">
+                                    <img src="assets/images/world.svg" />
+                                </div>
+                                <div class="count d-flex flex-column">
+
+                                    <span class="count-number">11,000 <span class="count-special">+89</span></span>
+
+                                    <span class="count-text">E-mail</span>
+                                </div>
+                            </div>
+                            <div class="overview-content d-flex align-items-center content-border">
+
+                                <div class="count d-flex flex-column">
+
+                                    <span class="count-number">145<span class="count-special">+89</span></span>
+
+                                    <span class="count-text">Social Share</span>
+                                </div>
+                            </div>
+                            <div class="overview-content d-flex align-items-center">
+
+                                <div class="count d-flex flex-column">
+
+                                    <span class="count-number">145<span class="count-special">+89</span></span>
+
+                                    <span class="count-text">Unique Link</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="overview-wrapper">
+                        <span class="overview-heading">Total Purpose</span>
+
+                        <div class="overview-content d-flex align-items-center">
+
+                            <div class="overview-image d-flex align-items-center justify-content-center">
+                                <img src="assets/images/purpose.svg" />
+                            </div>
+                            <div class="count"><span class="count-number">34</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="row mt-0 mt-md-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card w-100 mt-2">
+                    <button data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <div class="card-body d-flex justify-content-center align-items-center flex-column">
+
+                            <div class="icon-add d-flex justify-content-center align-items-center">
+                                <img src="assets/images/plus.svg" />
+                            </div>
+                            <h5 class="card-title py-2 mb-0">New Assessment</h5>
+                            <p class="card-text text-center">From here you can add questions of multiple types like
+                                MCQs,
+                                subjective (text or paragraph)!</p>
+
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <ng-container *ngFor="let item of source">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <app-cards [source]="item"></app-cards>
+                </div>
+            </ng-container>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Create new assessment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="col-auto">
+                    <label for="staticEmail2">Name of assessment</label>
+                    <input type="text" class="form-control  form-control-lg" id="staticEmail2" placeholder="Type Here">
+                </div>
+
+                <div class="col-auto">
+                    <label for="staticEmail2">Purpose of the test is</label>
+                    <select class="form-select form-select-lg" aria-label="Default select example">
+                        <option selected>Select</option>
+                        <option value="1">One</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <label for="staticEmail2">Description</label>
+                    <select class="form-select form-select-lg" aria-label="Default select example">
+                        <option selected>Select</option>
+                        <option value="1">One</option>
+                    </select>
+                </div>
+
+                <div class="col-auto d-flex flex-column">
+                    <label for="staticEmail2">Skills</label>
+
+                    <div class="chips-container row p-2 pt-0">
+                        <ng-container *ngFor="let items of values">
+                            <div class="chips-set col-4 me-2">
+                                <span> {{items}}</span> <img src="assets/images/cross.svg" alt="cross" class="ps-1" />
+                            </div>
+                        </ng-container>
+                    </div>
+                    <input type="text" class="form-control  form-control-lg form-control-custom" id="staticEmail2"
+                        placeholder="Type Here">
+                </div>
+
+                <div class="col-auto">
+                    <label for="staticEmail2">Duration of assessment</label>
+                    <input type="text" class="form-control  form-control-lg" id="staticEmail2" placeholder="HH:MM:SS">
+                </div>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

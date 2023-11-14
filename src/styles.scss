@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '../src/assets/scss/main';
+@import '../src/assets/scss/custom';
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+body{
+  background-color: $body-color !important;
+  overflow-y: scroll;
+}
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: $header-font !important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+ color: $header-font !important;
+opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+ color: $header-font !important;
+opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: $header-font !important;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: $header-font !important;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+ color: $header-font !important;
+}
+
+
+select,
+option:not(:first-of-type)  {
+color: $header-font !important;
+font-size: 1rem;
+}

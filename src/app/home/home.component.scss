@@ -1,0 +1,18 @@
+
+@import '../../assets/scss/custom';
+@import '../../assets/scss/base';
+
+.side-bar{
+    div{
+        &:nth-child(2){
+            background-color: $white;
+            @include media-breakpoint-up(md) {
+                right: 1em;
+                top: 1em;
+                left: 9em; 
+                border-radius: 10px;
+              }
+        }
+    }
+  
+}

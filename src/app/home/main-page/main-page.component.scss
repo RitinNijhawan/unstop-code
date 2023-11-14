@@ -1,0 +1,233 @@
+@import "../../../assets/scss/custom";
+@import "../../../assets/scss/base";
+
+.main-conatiner {
+    // background-color: $white;
+    width: 100%;
+    min-height: 100vh;
+
+    header {
+        overflow-x: hidden;
+
+        @include media-breakpoint-up(md) {
+            border-bottom: 2px solid $navbar-border;
+        }
+
+        h4,
+        h5 {
+            color: $header-font;
+            padding: 0.8em;
+            margin-bottom: 0;
+        }
+
+        h5 {
+            color: $border-color;
+        }
+
+        .ass-sub-heading {
+            &::after {
+                content: "";
+                border-bottom: 4px solid $border-color;
+                display: block;
+                width: 82%;
+                margin-bottom: -5px;
+            }
+        }
+    }
+
+    .header-mobile {
+        li {
+            width: 50%;
+            a {
+                color: $header-font;
+                font-weight: 500;
+                padding-top: 1em;
+                padding-bottom: 1em;
+                text-align: center;
+            }
+
+            .active {
+                border: none;
+                text-align: center;
+                border-bottom: 3px solid $border-color;
+                color: $border-color;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.content-main {
+    font-weight: 600;
+
+    .overview {
+        &-container {
+            border: 1px solid $navbar-border;
+            border-radius: 15px;
+            width: 100%;
+        }
+
+        &-wrapper {
+            padding: 16px 20px;
+            padding-right: 5vw;
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                border-right: 1px solid $navbar-border;
+                margin: 0 0.5em;
+            }
+        }
+
+        &-heading {
+            font-size: 1.2em;
+            color: $header-font;
+        }
+
+        &-image {
+            background-color: $active-background;
+            padding: 0.6em;
+            border-radius: 8px;
+            height: 45px;
+            width: 45px;
+
+            &-red {
+                background-color: $light-red;
+                padding: 0.6em;
+                border-radius: 8px;
+                height: 45px;
+                width: 45px;
+            }
+        }
+
+        &-content {
+            padding: 1em;
+            padding-left: 0;
+            padding-bottom: 0.5em;
+            padding-top: 1.2em;
+            color: $header-font;
+
+            .count {
+                padding-left: 1em;
+
+                &-number {
+                    font-weight: 700;
+
+                    font-size: 1.3em;
+                }
+
+                &-special {
+                    color: $green;
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+
+                &-text {
+                    color: $header-font;
+                }
+            }
+        }
+    }
+
+    .content-border {
+        display: block;
+        border-right: 1px solid $navbar-border;
+    }
+
+    .card {
+        border-right: 1px dashed $navbar-border;
+        border-radius: 10px;
+        height: 240px;
+        color: $header-font;
+        background-color: $body-color;
+
+        button {
+            background: transparent;
+            border: none;
+            height: 100%;
+        }
+
+        .icon-add {
+            background-color: $white;
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+        }
+
+        p {
+            font-size: 15px;
+            padding-top: 10px;
+            color: $header-font;
+        }
+    }
+}
+
+.modal {
+    &-header {
+        h5 {
+            color: $header-font;
+            font-weight: 700;
+        }
+    }
+
+    &-body {
+        label {
+            color: $header-font;
+            font-weight: 500;
+            font-size: 1.1em;
+            margin-bottom: 0.5em;
+        }
+
+        .form-control,
+        .form-select {
+            margin-bottom: 0.5em;
+
+            &-lg {
+                font-size: 1rem;
+                border-radius: 0.7rem;
+                border-color: $border-fields;
+            }
+            &-custom {
+                border-top-width: 0px;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+            }
+        }
+
+        .chips {
+            &-container {
+                border: 1px solid $border-fields;
+                border-top-left-radius: 0.7rem;
+                border-top-right-radius: 0.7rem;
+                margin: 0em;
+            }
+
+            &-set {
+                background: $ligh-blue;
+                width: max-content;
+                padding: 0.5em 0.7em;
+                font-size: 0.8em;
+                border-radius: 50px;
+                color: $header-font;
+                font-weight: 500;
+                margin: 10px 0em;
+                img {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &-footer {
+        button {
+            background-color: $button-color;
+            border-radius: 10px;
+        }
+    }
+
+    &-dialog {
+        @include media-breakpoint-up(md) {
+            max-width: 600px;
+        }
+    }
+}

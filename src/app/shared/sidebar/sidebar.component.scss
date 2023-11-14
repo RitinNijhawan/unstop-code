@@ -1,0 +1,82 @@
+@import '../../../assets/scss/custom';
+
+.desktop-navbar {
+    width: 130px;
+    height: 100vh;
+    background: $white;
+
+    .nav {
+        &-item {
+            padding: 0.8em 0.3em;
+            margin-left: 5px;
+            margin: 0.5em;
+
+            a {
+                font-weight: 500;
+                padding-bottom: 0;
+                color: $header-font;
+                font-size: 14px;
+                text-align: center;
+
+            }
+        }
+    }
+
+    ul {
+        margin: 1em auto;
+
+    }
+
+    .dotted-line {
+        border-bottom: 2px dotted $navbar-border;
+        width: 60%;
+    }
+   
+    .role{
+        margin: 1em;
+        span{
+            color: $dark-red;
+            border: 2px solid $dark-red;
+            border-radius: 30px;
+            text-align: center;
+           background-color: $light-red;
+            font-size: 0.7em;
+        width: max-content;
+        padding: 0 10px;
+        }
+        
+    }
+}
+
+
+.active-item {
+    border: 1px solid $border-color;
+    background-color: $active-background;
+    border-radius: 10px;
+
+    a {
+        color: $border-color !important;
+    }
+}
+
+
+
+.mobile-navbar{
+    background: $white;
+    .navbar{
+        &-toggler{
+            background-color: $active-background;
+            border-radius: 50px;
+            height: 40px;
+            width: 40px;
+            border-width: 0;
+
+        
+        }
+
+    }
+    h4{
+        color: $header-font;
+    }
+    
+}
