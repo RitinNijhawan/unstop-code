@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light  mobile-navbar d-block d-md-none">
+<nav class="navbar navbar-expand-lg navbar-light  mobile-navbar d-block d-lg-none">
   <div class="container-fluid">
     <div class="d-flex justify-content-between align-items-center w-100">
       <div class="d-flex align-items-center justify-content-center">
@@ -20,17 +20,17 @@
 
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item d-flex justify-content-start align-items-center flex-row flex-md-column p-2">
+        <li class="nav-item d-flex justify-content-start align-items-center flex-row flex-lg-column p-2" routerLink="/home/dashboard" routerLinkActive="active-item">
           <img src="assets/images/dashboard.svg" alt="dashboard" [height]="25" />
           <a class="nav-link ps-2" aria-current="page">Dashboard</a>
         </li>
 
-        <li class="nav-item d-flex justify-content-start align-items-center flex-row flex-md-column active-item p-2">
+        <li class="nav-item d-flex justify-content-start align-items-center flex-row flex-lg-column active-item p-2" routerLink="/home/assesment" routerLinkActive="active-item">
           <img src="assets/images/notes.svg" alt="Assesment" [height]="25" />
           <a class="nav-link ps-2" aria-current="page">Assesment</a>
         </li>
-        <li class="nav-item d-flex justify-content-start align-items-center flex-row flex-md-column p-2">
-          <img src="assets/images/customer-service.png" alt="Library" [height]="25" />
+        <li class="nav-item d-flex justify-content-start align-items-center flex-row flex-lg-column p-2" routerLink="/home/library" routerLinkActive="active-item">
+          <img src="assets/images/customer-service.svg" alt="Library" [height]="25" />
           <a class="nav-link ps-2 " aria-current="page">My Library</a>
         </li>
       </ul>
@@ -45,7 +45,7 @@
 
 
 <nav
-  class="navbar desktop-navbar navbar-expand-lg  align-items-start justify-content-center position-fixed d-none d-md-block ">
+  class="navbar desktop-navbar navbar-expand-lg  align-items-start justify-content-center position-fixed d-none d-lg-block ">
   <div class="flex-column align-items-start">
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -54,22 +54,24 @@
     </button>
     <div class="collapse navbar-collapse flex-column" id="navbarNav">
       <ul class="navbar-nav flex-column">
-        <li class="nav-item d-flex justify-content-center align-items-center flex-row flex-md-column">
-          <img src="assets/images/dashboard.svg" alt="dashboard" [height]="25" />
-          <a class="nav-link " aria-current="page">Dashboard</a>
-        </li>
 
-        <li class="nav-item d-flex justify-content-center align-items-center flex-row flex-md-column active-item">
+        <li class="nav-item d-flex justify-content-center align-items-center flex-row flex-md-column" routerLink="/home/dashboard" routerLinkActive="active-item">
+          <img src="assets/images/dashboard.svg" alt="dashboard" [height]="25" />
+          <a class="nav-link " aria-current="page" >Dashboard</a>
+        </li>
+      
+
+        <li class="nav-item d-flex justify-content-center align-items-center flex-row flex-md-column" routerLink="/home/assesment" routerLinkActive="active-item">
           <img src="assets/images/notes.svg" alt="Assesment" [height]="25" />
           <a class="nav-link " aria-current="page">Assesment</a>
         </li>
-        <li class="nav-item d-flex justify-content-center align-items-center flex-row flex-md-column">
-          <img src="assets/images/customer-service.png" alt="Library" [height]="25" />
+        <li class="nav-item d-flex justify-content-center align-items-center flex-row flex-md-column"    routerLink="/home/library"   routerLinkActive="active-item"                             >
+          <img src="assets/images/customer-service.svg" alt="Library" [height]="25" />
           <a class="nav-link " aria-current="page">My Library</a>
         </li>
       </ul>
       <div class="w-100 d-flex justify-content-center align-items-center">
-        <div class="dotted-line"></div>
+        <div class="dotted-line"></div>     
       </div>
 
       <div class="role d-flex justify-content-center align-items-center mb-0">
@@ -77,7 +79,7 @@
       </div>
 
       <ul class="navbar-nav flex-column mt-0">
-        <li class="nav-item d-flex justify-content-center align-items-center flex-row flex-md-column">
+        <li class="nav-item d-flex justify-content-center align-items-center flex-row flex-md-column" routerLink="/home/round" routerLinkActive="active-item">
           <img src="assets/images/link.svg" alt="dashboard" [height]="30" />
           <a class="nav-link " aria-current="page">Round Status</a>
         </li>

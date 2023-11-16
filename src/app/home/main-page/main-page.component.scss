@@ -59,7 +59,7 @@
 
 .content-main {
     font-weight: 600;
-
+    overflow-x: hidden;
     .overview {
         &-container {
             border: 1px solid $navbar-border;
@@ -69,13 +69,13 @@
 
         &-wrapper {
             padding: 16px 20px;
-            padding-right: 5vw;
+         padding-right: 5vw;
 
             &:nth-child(1),
             &:nth-child(2),
             &:nth-child(3) {
                 border-right: 1px solid $navbar-border;
-                margin: 0 0.5em;
+                margin: 0 0em;
             }
         }
 
@@ -200,6 +200,7 @@
                 border-top-left-radius: 0.7rem;
                 border-top-right-radius: 0.7rem;
                 margin: 0em;
+                min-height: 100px;
             }
 
             &-set {
@@ -211,6 +212,7 @@
                 color: $header-font;
                 font-weight: 500;
                 margin: 10px 0em;
+                height: fit-content;
                 img {
                     cursor: pointer;
                 }

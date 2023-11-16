@@ -1,7 +1,7 @@
 <div class="main-conatiner">
 
     <!--Desktop Header-->
-    <header class="d-none d-md-flex justify-content-between align-items-center">
+    <header class="d-none d-lg-flex justify-content-between align-items-center">
 
         <div class="d-flex align-items-center">
             <h4>Assessment</h4>
@@ -17,13 +17,13 @@
     </header>
 
     <!--Mobile Tab-->
-    <header class="d-block d-md-none header-mobile">
+    <header class="d-block d-lg-none header-mobile">
         <ul class="nav nav-tabs">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">My Assessments</a>
+                <a class="nav-link" [class.active]="isAssesement" aria-current="page" (click)="isAssesement = true">My Assessments</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Unstop Assessments</a>
+                <a class="nav-link" [class.active]="!isAssesement" (click)="isAssesement = false">Unstop Assessments</a>
             </li>
         </ul>
     </header>
@@ -37,12 +37,12 @@
 
 
     <div class="p-3 content-main">
-        <h5 class="d-none d-md-block">Assessments Overview</h5>
+        <h5 class="d-none d-lg-block">Assessments Overview</h5>
 
-        <div class="d-flex d-md-none justify-content-between align-items-center my-2">
-            <h5> My Assessment</h5>
+        <div class="d-flex d-lg-none justify-content-between align-items-center my-2">
+            <h5>{{isAssesement ? 'My Assessment' : 'Unstop Assessments'}} </h5>
 
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center mx-2">
                 <img src="assets/images/search.svg" alt="search" />
                 <img src="assets/images/filter.svg" alt="filter" class="mx-3" />
                 <img src="assets/images/bar.svg" alt="bar" />
@@ -51,7 +51,7 @@
         </div>
 
 
-        <div class="row d-none d-md-flex ">
+        <div class="row d-none d-lg-flex ">
 
             <div class="col-12 d-flex flex-row">
 
@@ -67,7 +67,6 @@
                         </div>
 
                     </div>
-
                     <div class="overview-wrapper">
                         <span class="overview-heading">Candidates</span>
 
@@ -88,7 +87,7 @@
 
                                 <div class="count d-flex flex-column">
 
-                                    <span class="count-number">1,14<span class="count-special">+89</span></span>
+                                    <span class="count-number">1,14 <span class="count-special">+89</span></span>
 
                                     <span class="count-text">Who Attamped</span>
                                 </div>
@@ -116,7 +115,7 @@
 
                                 <div class="count d-flex flex-column">
 
-                                    <span class="count-number">145<span class="count-special">+89</span></span>
+                                    <span class="count-number">145 <span class="count-special">+89</span></span>
 
                                     <span class="count-text">Social Share</span>
                                 </div>
@@ -125,7 +124,7 @@
 
                                 <div class="count d-flex flex-column">
 
-                                    <span class="count-number">145<span class="count-special">+89</span></span>
+                                    <span class="count-number">145 <span class="count-special">+89</span></span>
 
                                     <span class="count-text">Unique Link</span>
                                 </div>
@@ -145,6 +144,14 @@
                             <div class="count"><span class="count-number">34</span></div>
                         </div>
                     </div>
+                    
+
+                  
+
+              
+
+
+                
                 </div>
             </div>
 
@@ -153,7 +160,11 @@
 
 
 
+
+      
+
         <div class="row mt-0 mt-md-4">
+            <ng-container *ngIf="isAssesement">
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card w-100 mt-2">
                     <button data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -177,7 +188,23 @@
                     <app-cards [source]="item"></app-cards>
                 </div>
             </ng-container>
+        </ng-container>
+        <ng-container *ngIf="!isAssesement">
+
+            <div class="col-12 ">
+
+                <coming-soon></coming-soon>
+                </div>
+        </ng-container>
+
         </div>
+
+
+
+
+
+
+
 
     </div>
 
@@ -230,14 +257,14 @@
                     <label for="staticEmail2">Skills</label>
 
                     <div class="chips-container row p-2 pt-0">
-                        <ng-container *ngFor="let items of values">
+                        <ng-container *ngFor="let items of values;let i = index;">
                             <div class="chips-set col-4 me-2">
-                                <span> {{items}}</span> <img src="assets/images/cross.svg" alt="cross" class="ps-1" />
+                                <span> {{items}}</span> <img src="assets/images/cross.svg" alt="cross" class="ps-1" (click)="deleteIndex(i)"/>
                             </div>
                         </ng-container>
                     </div>
                     <input type="text" class="form-control  form-control-lg form-control-custom" id="staticEmail2"
-                        placeholder="Type Here">
+                        placeholder="Type Here" [(ngModel)]="inputSource" (keyup.enter)="storeValue($event)">
                 </div>
 
                 <div class="col-auto">

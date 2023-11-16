@@ -12,5 +12,18 @@ export class MainPageComponent {
   source:Array<any>=[{heading:"Math Assessment" , jobDate:"20 Apr 2023", duration:"00",questions:"00" , persons:['LP'], share:'#'},
   {heading:"Math Assessment" , jobDate:"20 Apr 2023", duration:"00",questions:"00" , persons:['LP','GP','LP'], share:'#'}]
   values:Array<any> =['UI/UX and Design','No of Question','Web Development','UI/UX and Design','Web Development']
+  isAssesement:boolean = true;
+  inputSource:string =''
+
+
+  storeValue(event:any){
+    this.values.push(this.inputSource)
+   this.inputSource = ''
+  }
+
+
+  deleteIndex(index:number){
+    this.values.splice(index, 1);
+  }
 
 }
