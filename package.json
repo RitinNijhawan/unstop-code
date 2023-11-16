@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "live-run":"ng build --base-href https://ritinnijhawan.github.io/"
   },
   "private": true,
   "dependencies": {

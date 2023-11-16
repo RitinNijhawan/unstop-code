@@ -1,17 +1,13 @@
 @import '../../../../assets/scss/custom';
+@import '../../../../assets/scss/base';
 
 .card {
-    border-right: 1px dashed $navbar-border;
-    border-radius: 10px;
-    height: 240px;
-    color: $header-font;
-
-    &:not(.new) {
-        background-color: $body-color;
-    }
+ 
+   
 
     h5 {
         color: $header-font;
+        font-size: 1.1em;
     }
 
     .icon-add {
